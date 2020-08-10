@@ -22,12 +22,18 @@ $("#second").click(function(){
         document.getElementById("answer").value = "19";
         document.getElementById("second").setAttribute("maxlength",firstNDigit);
         document.getElementById("forth").setAttribute("maxlength",firstNDigit);
+        document.getElementById("second").placeholder = "Enter a "+firstNDigit+" Digit Number";
+        document.getElementById("forth").placeholder = "Enter a "+firstNDigit+" Digit Number";
         document.getElementById("first").disabled = "true";
+        document.getElementById("getSum").innerHTML = "Scroll Down. AI Predicted the Sum";
     } else {
         document.getElementById("answer").value = "2"+firstN-2;
         document.getElementById("second").setAttribute("maxlength",firstNDigit);
         document.getElementById("forth").setAttribute("maxlength",firstNDigit);
+        document.getElementById("second").placeholder = "Enter a "+firstNDigit+" Digit Number";
+        document.getElementById("forth").placeholder = "Enter a "+firstNDigit+" Digit Number";
         document.getElementById("first").disabled = "true";
+        document.getElementById("getSum").innerHTML = "Scroll Down. AI Predicted the Sum";
     }
     
 });
