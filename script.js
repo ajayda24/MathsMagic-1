@@ -1,5 +1,4 @@
-
-document.getElementById("first").setAttribute("maxlength","19");
+document.getElementById("first").setAttribute("maxlength","20");
 document.getElementById("calc").disabled = "true";
 $("#second").click(function(){
     
@@ -44,19 +43,27 @@ function secondTextbox(current)  {
     var firstString = firstN.toString();
     var firstNDigit = Number(firstString.length);
 
-    var secondN = Number(document.form.secondNumber.value);
+    var sString = document.form.secondNumber.value
+    var secondN = Number(sString);
     var secondString = secondN.toString();
     var thirdTextbox = "";
+    
     if(current.value.length >= current.maxLength){
-        for(var i=0;i<firstNDigit;i++){
-            var secondDigit = secondString[firstNDigit-(firstNDigit-i)];
-            var thirdTextboxMinuseNine = 9-secondDigit;
-            thirdTextbox += thirdTextboxMinuseNine;
-            }
-        document.getElementById("second").setAttribute("disabled","true");
-        document.getElementById("forth").removeAttribute("disabled");
-        document.getElementById("third").value = thirdTextbox;
-        document.getElementById("forth").focus();
+        var zeroSFront = sString[0];
+        if(zeroSFront == 0){
+            alert("Enter a Three digit Number");
+            document.getElementById("second").value = "";
+        } else {
+            for(var i=0;i<firstNDigit;i++){
+                var secondDigit = secondString[firstNDigit-(firstNDigit-i)];
+                var thirdTextboxMinuseNine = 9-secondDigit;
+                thirdTextbox += thirdTextboxMinuseNine;
+                }
+            document.getElementById("second").setAttribute("disabled","true");
+            document.getElementById("forth").removeAttribute("disabled");
+            document.getElementById("third").value = thirdTextbox;
+            document.getElementById("forth").focus();
+        }
     }
 }
 
@@ -65,18 +72,23 @@ function forthTextbox(current) {
     var firstString = firstN.toString();
     var firstNDigit = Number(firstString.length);
 
-    var forthN = Number(document.form.forthNumber.value);
+    var forString = document.form.forthNumber.value
+    var forthN = Number(forString);
     var forthString = forthN.toString();
     var fifthTextbox = "";
     if(current.value.length >= current.maxLength){
-        for(var i=0;i<firstNDigit;i++){
-            var forthDigit = forthString[firstNDigit-(firstNDigit-i)];
-            var forthTextboxMinuseNine = 9-forthDigit;
-            fifthTextbox += forthTextboxMinuseNine;
-            }
-        document.getElementById("forth").setAttribute("disabled","true");
-        document.getElementById("fifth").value = fifthTextbox;
+        var zeroFFront = forString[0]
+        if(zeroFFront == 0){
+            alert("Enter a Three digit Number");
+            document.getElementById("forth").value = "";
+        } else {
+            for(var i=0;i<firstNDigit;i++){
+                var forthDigit = forthString[firstNDigit-(firstNDigit-i)];
+                var forthTextboxMinuseNine = 9-forthDigit;
+                fifthTextbox += forthTextboxMinuseNine;
+                }
+            document.getElementById("forth").setAttribute("disabled","true");
+            document.getElementById("fifth").value = fifthTextbox;
+        }
     }
 }
-
-// alert(count);
