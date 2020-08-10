@@ -42,6 +42,7 @@ p{
     border-radius: 12px;
     margin: 30px auto;
     padding: 20px 20px 100px 20px;
+    background-color: #2d2d3b;
   }
   #agh{
     position: relative;
@@ -81,7 +82,9 @@ p{
     margin: 5px auto;
     font-size: 20px;
     padding: 10px;
-    box-shadow: 4px 0px 12px black inset;
+    box-shadow: 4px 0px 6px black inset;
+    color: whitesmoke;
+    font-weight: bold;
   }
 
 
