@@ -50,7 +50,13 @@ function secondTextbox(current)  {
     
     if(current.value.length >= current.maxLength){
         var zeroSFront = sString[0];
-        if(zeroSFront == 0){
+        if(secondN <=0){
+            alert("Enter a Positive Number");
+            document.getElementById("second").value = "";
+        } else if(isNaN(secondN)){
+            alert("Enter a number");
+            document.getElementById("second").value = "";
+        } else if(zeroSFront == 0){
             alert("Enter a Three digit Number");
             document.getElementById("second").value = "";
         } else {
@@ -77,8 +83,14 @@ function forthTextbox(current) {
     var forthString = forthN.toString();
     var fifthTextbox = "";
     if(current.value.length >= current.maxLength){
-        var zeroFFront = forString[0]
-        if(zeroFFront == 0){
+        var zeroFFront = forString[0];
+        if(forthN <=0){
+            alert("Enter a Positive Number");
+            document.getElementById("forth").value = "";
+        } else if(isNaN(forthN)){
+            alert("Enter a number");
+            document.getElementById("forth").value = "";
+        } else if(zeroFFront == 0){
             alert("Enter a Three digit Number");
             document.getElementById("forth").value = "";
         } else {
