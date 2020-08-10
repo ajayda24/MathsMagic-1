@@ -1,5 +1,5 @@
 
-
+document.getElementById("first").setAttribute("maxlength","20");
 $("#second").click(function(){
     
     
