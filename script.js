@@ -1,5 +1,6 @@
 
 document.getElementById("first").setAttribute("maxlength","19");
+document.getElementById("calc").disabled = "true";
 $("#second").click(function(){
     
     
